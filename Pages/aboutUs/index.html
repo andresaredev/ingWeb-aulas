@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Aulas</title>
+</head>
+<body>
+    <h1>Aulas Disponibles</h1>
+    <button id="fetchDataBtn">Cargar Aulas</button>
+    
+    <!-- Tabla para mostrar los datos -->
+    <table border="1" id="aulasTable" style="margin-top: 20px; width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Estado de Aula</th>
+                <th>Capacidad</th>
+                <th>Nombre</th>
+                <th>Tipo de Aula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertarán los datos dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('fetchDataBtn').addEventListener('click', () => {
+            
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then(response => response.json())
+                 .then(json => console.log(json))
+        });
+    </script>
+</body>
+</html>
