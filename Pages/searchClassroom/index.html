@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Aulas</title>
+    <link
+      rel="stylesheet"
+      href="../../css/searchClassroom/searchClassroom.css"
+    />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <img class="umbLogo" src="../../assets/umbLogo.png" />
+      <h1 class="logo">Reserva<br />de Aulas</h1>
+      <a href="/Pages/home/index.html" class="nav-item">Inicio</a>
+      <a href="/Pages/searchClassroom/index.html" class="nav-item active"
+        >Buscar aula</a
+      >
+    </nav>
+    <div class="main-content">
+      <h1>Aulas Disponibles</h1>
+
+      <div class="search-container">
+        <input id="searchInput" type="text" placeholder="ej. A405, C708, etc." />
+        <button id="searchButton">Buscar aula →</button>
+      
+    </div>
+
+    <div id="loader" class="loader" style="display: none;">Cargando aulas...</div>
+
+      <table
+        border="1"
+        id="aulasTable"
+      >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Estado de Aula</th>
+            <th>Capacidad</th>
+            <th>Nombre</th>
+            <th>Tipo de Aula</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán los datos dinámicamente NO QUITARRRRRRRRR-->
+        </tbody>
+      </table>
+    </div>
+
+    <script type="module" src="../../api/home/apiHome.js"></script>
+  </body>
+</html>
