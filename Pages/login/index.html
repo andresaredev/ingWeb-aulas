@@ -54,12 +54,12 @@
       const codSisError = document.getElementById("codSisError");
       const passwordError = document.getElementById("passwordError");
 
-      // Validación del formulario
+      
       function validarData(event) {
-        event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+        event.preventDefault(); 
         let isValid = true;
 
-        // Validar correo institucional
+       
         if (!codSisInput.value.endsWith("@docentes.umb.edu.co")) {
           codSisError.textContent =
             "El correo debe ser institucional (@docentes.umb.edu.co).";
@@ -70,7 +70,7 @@
           codSisInput.classList.remove("error-border");
         }
 
-        // Validar contraseña
+       
         if (passwordInput.value.length < 6) {
           passwordError.textContent =
             "La contraseña debe tener al menos 6 caracteres.";
@@ -81,7 +81,6 @@
           passwordInput.classList.remove("error-border");
         }
 
-        // Si es válido, redirigir
         if (isValid) {
           window.location.replace("/Pages/homeLog/index.html");
         }
