@@ -16,7 +16,7 @@ body {
     margin-top: -10px;
 }
 
-.umbLogo{
+.umbLogo {
     width: 80px;
     align-self: center;
     margin-top: 50px;
@@ -57,6 +57,11 @@ body {
 .main-content {
     flex: 1;
     padding: 20px;
+
+    h2 {
+        font-size: 50px;
+        color: #333333;
+    }
 }
 
 .top-bar {
@@ -65,6 +70,94 @@ body {
     margin-top: 20px;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.user-info span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.nav-items {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-items li {
+    margin-bottom: 10px;
+}
+
+.nav-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-items .active a {
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: auto;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+}
+
+h2 {
+    color: #1e2a4a;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #981826;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Formulario de reserva */
+.reservation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
 }
 
 .btn {
@@ -80,78 +173,28 @@ body {
     color: #FFFFFF;
 }
 
-.content{
-    position: relative;
-    width: 90%;
-    max-width: 1000px;
-}
-
-.content h2 {
-    font-size: 70px;
-    color: #333333;
-}
-
-.highlight {
-    color: #D9272D;
-}
-
-.content p {
-    margin-top: 24px;
-    font-size: 24px;
-    color: #555555;
-}
-
-.reservation-info {
-    margin-top: 20px;
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.table {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.table-row {
-    display: contents;
-}
-
-.table-row span, .add-btn {
-    padding: 10px;
-    background-color: #F7F9FB;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.status {
+.btn.logOut {
+    margin-top: 10px;
+    margin-right: 30px;
+    background-color: #d9534f;
     color: #FFFFFF;
-    padding: 5px 10px;
-    border-radius: 5px;
 }
 
-.status.available {
-    background-color: #28A745;
-}
-
-.add-btn {
-    background-color: #6C757D;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
-
-.selected-info {
-    margin-bottom: 20px;
-}
-
-.actions {
+/* Botones */
+.form-buttons {
+    grid-column: span 2;
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.back-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+.confirm-button {
+    background-color: #981826;
+    color: #fff;
 }
 
 .popup {
@@ -200,8 +243,7 @@ body {
     color: #333;
 }
 
-
 #confirmLogoutButton {
-    background-color: #d9534f;
+    background-color: #981826;
     color: #fff;
 }

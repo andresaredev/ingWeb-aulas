@@ -16,7 +16,7 @@ body {
     margin-top: -10px;
 }
 
-.umbLogo{
+.umbLogo {
     width: 80px;
     align-self: center;
     margin-top: 50px;
@@ -57,6 +57,11 @@ body {
 .main-content {
     flex: 1;
     padding: 20px;
+
+    h2 {
+        font-size: 50px;
+        color: #333333;
+    }
 }
 
 .top-bar {
@@ -65,6 +70,58 @@ body {
     margin-top: 20px;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.add-btn,
+.confirm-btn {
+    background-color: #11274a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-btn:hover,
+.confirm-btn:hover {
+    background-color: #0a1c35;
 }
 
 .btn {
@@ -80,79 +137,13 @@ body {
     color: #FFFFFF;
 }
 
-.content{
-    position: relative;
-    width: 90%;
-    max-width: 1000px;
-}
-
-.content h2 {
-    font-size: 70px;
-    color: #333333;
-}
-
-.highlight {
-    color: #D9272D;
-}
-
-.content p {
-    margin-top: 24px;
-    font-size: 24px;
-    color: #555555;
-}
-
-.reservation-info {
-    margin-top: 20px;
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.table {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.table-row {
-    display: contents;
-}
-
-.table-row span, .add-btn {
-    padding: 10px;
-    background-color: #F7F9FB;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.status {
+.btn.logOut {
+    margin-top: 10px;
+    margin-right: 30px;
+    background-color: #d9534f;
     color: #FFFFFF;
-    padding: 5px 10px;
-    border-radius: 5px;
 }
 
-.status.available {
-    background-color: #28A745;
-}
-
-.add-btn {
-    background-color: #6C757D;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
-
-.selected-info {
-    margin-bottom: 20px;
-}
-
-.actions {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-}
 
 .popup {
     display: none;
@@ -200,8 +191,7 @@ body {
     color: #333;
 }
 
-
 #confirmLogoutButton {
-    background-color: #d9534f;
+    background-color: #981826;
     color: #fff;
 }

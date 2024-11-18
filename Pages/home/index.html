@@ -12,6 +12,8 @@
         <h1 class="logo">Reserva<br>de Aulas</h1>
         <a href="/Pages/home/index.html" class="nav-item active">Inicio</a>
         <a href="/Pages/aboutUs/index.html" class="nav-item">Buscar aula</a>
+        <a href="/Pages/makeReservation/" class="nav-item">Crear Reserva</a>
+        
     </nav>
 
     <div class="main-content">
@@ -22,10 +24,23 @@
 
         <section class="content">
             <div class="text-content">
-                <h2>Que aula le gustaría <span class="highlight">reservar?</span></h2>
+                <h2>¿Qué aula le gustaría <span class="highlight">reservar?</span></h2>
             </div>
             <img src="../../assets/home.png" class="main-image">
         </section>
     </div>
+
+     <!-- Pop-up para cerrar sesión -->
+    <div id="logoutPopup" class="popup">
+        <div class="popup-content">
+            <p>Está a punto de terminar su sesión</p>
+            <div class="popup-buttons">
+                <button id="cancelButton">Cancelar</button>
+                <button id="confirmLogoutButton">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../../js/logOut.js"></script>
 </body>
 </html>
