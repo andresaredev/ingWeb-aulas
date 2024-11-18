@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="/ingWeb-aulas/css/login/login.css">
+</head>
+<body>
+  <div class="form-container">
+    <button class="close-button" onclick="cerrarFormulario()">x</button>
+    <form id="loginForm">
+      <h2>¡Hola, inicia sesión para poder separar las aulas!</h2>
+      <div class="form-group">
+        <label for="codSis">Ingrese correo institucional</label>
+        <input 
+          type="text" 
+          id="codSis" 
+          name="codSis" 
+          placeholder="usuario@docentes.umb.edu.co" 
+          required 
+        />
+        <small class="error" id="codSisError"></small>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="********" 
+          required 
+        />
+        <small class="error" id="passwordError"></small>
+      </div>
+      <button type="submit" class="btn-primary">Iniciar sesión</button>
+      <button type="button" class="btn-secondary">Registrarse</button>
+      <a href="#" class="link">Recuperar contraseña</a>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const codSisInput = document.getElementById('codSis');
+    const codSisError = document.getElementById('codSisError');
+
+    form.addEventListener('submit', (event) => {
+      const codSis = codSisInput.value;
+
+      if (!codSis.endsWith('@docentes.umb.edu.co')) {
+        event.preventDefault(); 
+        codSisError.textContent = 'El correo debe ser institucional (@docentes.umb.edu.co).';
+        codSisInput.classList.add('error-border');
+      } else {
+        codSisError.textContent = ''; 
+        codSisInput.classList.remove('error-border');
+      }
+    });
+    
+  </script>
+</body>
+</html>
