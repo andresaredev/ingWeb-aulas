@@ -13,26 +13,37 @@
     <nav class="sidebar">
       <img class="umbLogo" src="../../assets/umbLogo.png" />
       <h1 class="logo">Reserva<br />de Aulas</h1>
-      <a href="/Pages/home/index.html" class="nav-item">Inicio</a>
-      <a href="/Pages/searchClassroom/index.html" class="nav-item active"
+      <a href="/Pages/home/index.html" class="nav-item active">Inicio</a>
+      <a href="/Pages/searchClassroom/index.html" class="nav-item"
         >Buscar aula</a
       >
+      <a href="/Pages/makeReservation/" class="nav-item">Crear Reserva</a>
+      <a href="/Pages/home/index.html" class="nav-item">Historial</a>
+      <a href="/Pages/home/index.html" class="nav-item"
+        >Configurar</a
+      >
+      <button class="btn logOut btn primary" id="logoutButton">
+        Cerrar Sesión
+      </button>
     </nav>
+
     <div class="main-content">
       <h1>Aulas Disponibles</h1>
 
       <div class="search-container">
-        <input id="searchInput" type="text" placeholder="ej. A405, C708, etc." />
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="ej. A405, C708, etc."
+        />
         <button id="searchButton">Buscar aula →</button>
-      
-    </div>
+      </div>
 
-    <div id="loader" class="loader" style="display: none;">Cargando aulas...</div>
+      <div id="loader" class="loader" style="display: none">
+        Cargando aulas...
+      </div>
 
-      <table
-        border="1"
-        id="aulasTable"
-      >
+      <table border="1" id="aulasTable">
         <thead>
           <tr>
             <th>ID</th>
@@ -48,6 +59,11 @@
       </table>
     </div>
 
+    <!-- script para busqueda de aulas -->
     <script type="module" src="../../api/home/apiHome.js"></script>
+
+    <!-- script para boton cerrar sesion -->
+    <div id="popupContainer"></div>
+    <script src="../../js/logOut.js"></script>
   </body>
 </html>

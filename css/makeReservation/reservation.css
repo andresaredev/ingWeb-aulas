@@ -111,7 +111,6 @@ body {
     color: #ccc;
 }
 
-/* Contenido principal */
 .main-content {
     flex: 1;
     padding: 40px;
@@ -134,7 +133,6 @@ p {
     color: #555;
 }
 
-/* Formulario de reserva */
 .reservation-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -180,7 +178,6 @@ p {
     color: #FFFFFF;
 }
 
-/* Botones */
 .form-buttons {
     grid-column: span 2;
     display: flex;
@@ -197,53 +194,3 @@ p {
     color: #fff;
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup-content {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.popup-content p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.popup-buttons {
-    display: flex;
-    justify-content: space-around;
-}
-
-.popup-buttons button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#cancelButton {
-    background-color: #ccc;
-    color: #333;
-}
-
-#confirmLogoutButton {
-    background-color: #981826;
-    color: #fff;
-}

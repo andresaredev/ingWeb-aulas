@@ -1,6 +1,6 @@
 // Función para inicializar el pop-up de cierre de sesión
 function initializeLogoutPopup(logoutButtonId, popupId, cancelButtonId, confirmButtonId) {
-  // Obtener los elementos del DOM
+  
   const logoutButton = document.getElementById(logoutButtonId);
   const logoutPopup = document.getElementById(popupId);
   const cancelButton = document.getElementById(cancelButtonId);
@@ -27,7 +27,7 @@ function initializeLogoutPopup(logoutButtonId, popupId, cancelButtonId, confirmB
   });
 }
 
-// globalPopup.js
+// Carga el pop-up de cierre de sesión
 async function loadPopup() {
   const response = await fetch('../../Pages/LogOut/popup.html'); 
   const popupHTML = await response.text();

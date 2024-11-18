@@ -72,6 +72,11 @@ body {
     margin-bottom: 20px;
 }
 
+h3 {
+    color: #981826;
+    margin-bottom: 20px;
+} 
+
 form label {
     display: block;
     margin-top: 20px;
@@ -104,6 +109,11 @@ table th {
     background-color: #f4f4f4;
 }
 
+.occupied {
+    color: red;
+    font-weight: bold;
+}
+
 .available {
     color: green;
     font-weight: bold;
@@ -122,6 +132,13 @@ table th {
 .add-btn:hover,
 .confirm-btn:hover {
     background-color: #0a1c35;
+}
+
+.form-buttons {
+    margin-top: 10px;
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn {

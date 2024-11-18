@@ -11,8 +11,14 @@
       <img class="umbLogo" src="../../assets/umbLogo.png" />
       <h1 class="logo">Reserva<br />de Aulas</h1>
       <a href="/Pages/home/index.html" class="nav-item active">Inicio</a>
-      <a href="/Pages/aboutUs/index.html" class="nav-item">Buscar aula</a>
+      <a href="/Pages/searchClassroom/index.html" class="nav-item"
+        >Buscar aula</a
+      >
       <a href="/Pages/makeReservation/" class="nav-item">Crear Reserva</a>
+      <a href="/Pages/searchClassroom/index.html" class="nav-item">Historial</a>
+      <a href="/Pages/searchClassroom/index.html" class="nav-item"
+        >Configurar</a
+      >
       <button class="btn logOut btn primary" id="logoutButton">
         Cerrar Sesión
       </button>
@@ -20,9 +26,11 @@
 
     <div class="main-content">
       <h2>Crear reserva:</h2>
+      <h3>Seleccion de aula</h3>
       <p>
-        A continuación, indique la cantidad de estudiantes para la que necesita
-        su reserva.
+        Si necesita un aula en especifico puede ingresarla, tenga en
+        cuenta que si el aula que busca esta reservada por otro docente esta se
+        mostrara como: <strong style="color: red;">Ocupada</strong> o <strong style="color: green;">Disponible</strong> para una reserva.
       </p>
 
       <!-- Formulario -->
@@ -38,52 +46,55 @@
           required
         />
 
-        <label for="room">Buscar un aula o área en específico:</label>
+        <label for="room">Buscar un aula en específico:</label>
         <input type="text" id="room" name="room" placeholder="Auditorio" />
+        <button class="btn primary" id="searchButton">Buscar aula</button>
+
+        <div id="loader" class="loader" style="display: none">
+          Cargando aulas...
+        </div>
 
         <!-- Tabla de resultados -->
-        <table>
+        <table border="1" id="aulasTable">
           <thead>
             <tr>
-              <th>Aula</th>
+              <th>ID</th>
+              <th>Estado de Aula</th>
               <th>Capacidad</th>
-              <th>Horario</th>
-              <th>Fecha</th>
-              <th>Lugar</th>
-              <th>Estado</th>
-              <th>Acción</th>
+              <th>Nombre</th>
+              <th>Tipo de Aula</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Auditorio</td>
-              <td>270 estudiantes</td>
-              <td>15:45 - 17:15</td>
-              <td>20/05/2022</td>
-              <td>Sector Informática</td>
-              <td class="available">Disponible</td>
-              <td><button type="button" class="btn primary">Añadir</button></td>
-            </tr>
+            <!-- Aquí se insertarán los datos dinámicamente NO QUITARRRRRRRRR-->
           </tbody>
         </table>
 
-        <button type="submit" class="btn primary">Confirmar Reserva</button>
+        <div class="form-buttons">
+          <button type="button" class="btn" id="backButton">
+            Volver atrás
+          </button>
+          <button type="button" class="btn primary" id="nextButton">
+            Siguiente
+          </button>
+        </div>
       </form>
     </div>
 
+    <!-- script para busqueda de aulas -->
+    <script type="module" src="../../api/home/apiHome.js"></script>
+
+    <!-- script para boton cerrar sesion -->
     <div id="popupContainer"></div>
     <script src="../../js/logOut.js"></script>
 
     <script type="module">
-      // makeReservation.js
       document.addEventListener("DOMContentLoaded", () => {
-        const nextButton = document.getElementById("nextButton");
-
+        const nextButton = document.getElementById("backButton");
         nextButton.addEventListener("click", () => {
-          window.location.href = "./reservationDetails.html";
+          window.location.href = "./index.html";
         });
       });
     </script>
-    
   </body>
 </html>
