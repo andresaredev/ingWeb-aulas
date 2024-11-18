@@ -78,6 +78,8 @@ body {
   } */
   
   .btn-primary {
+    text-align: center;
+    text-decoration: none;
     display: block; 
     margin: 15px auto; 
     width: 70%;
@@ -96,9 +98,12 @@ body {
   }
   
   .btn-secondary {
+    text-decoration: none;
+    text-align: center;
     display: block; 
+    align-content: center;
     margin: 10px auto; 
-    width: 70%;
+    width: 65%;
     padding: 10px;
     background-color: #8d8e8f;
     color: #fff;
@@ -111,6 +116,11 @@ body {
 
   .btn-secondary:hover {
     background-color: #353536;
+  }
+
+  .form-btn{
+    position: relative;
+    align-items: center;
   }
 
   .link {

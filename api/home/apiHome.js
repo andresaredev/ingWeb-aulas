@@ -16,10 +16,10 @@ function cargarAulasEnTabla(aulas) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${aula.id}</td>
-            <td>${aula.id_estado_aula}</td>
+            <td>${aula.estado_aula.nombre}</td>
             <td>${aula.capacidad}</td>
             <td>${aula.nombre}</td>
-            <td>${aula.id_tipo_aula}</td>
+            <td>${aula.tipo_aula.nombre}</td>
         `;
         tbody.appendChild(row);
     });
@@ -41,7 +41,7 @@ function cargarYConfigurarBusqueda() {
                 const filter = searchInput.value.toLowerCase(); 
                 const filteredAulas = aulas.filter(aula => 
                     aula.nombre.toLowerCase().includes(filter) || 
-                    aula.id_tipo_aula.toLowerCase().includes(filter)
+                    aula.tipo_aula.id.toLowerCase().includes(filter)
                 );
                 cargarAulasEnTabla(filteredAulas); 
             });
