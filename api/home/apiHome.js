@@ -1,6 +1,6 @@
 // fetchAulas
 export function fetchAulas() {
-  return fetch("https://sgas-oot6.onrender.com/aulas_get")
+  return fetch("https:sgas-oot6.onrender.com/aulas_get ") 
     .then((response) => response.json())
     .catch((error) => {
       console.error("Error al cargar las aulas:", error);

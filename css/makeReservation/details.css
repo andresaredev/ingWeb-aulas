@@ -92,21 +92,27 @@ form input {
     border-radius: 5px;
 }
 
-table {
+#aulasTable {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-radius: 12px; 
+    overflow: hidden;
 }
 
-table th,
-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+#aulasTable th, #aulasTable td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
-table th {
-    background-color: #f4f4f4;
+#aulasTable th {
+    background-color: #981826;
+    color: #fff;
+}
+
+#aulasTable td {
+    background-color: #fff;
 }
 
 .occupied {
@@ -114,9 +120,8 @@ table th {
     font-weight: bold;
 }
 
-.available {
-    color: green;
-    font-weight: bold;
+.status.available {
+    background-color: #28A745;
 }
 
 .add-btn,
@@ -212,3 +217,15 @@ table th {
     background-color: #981826;
     color: #fff;
 }
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }

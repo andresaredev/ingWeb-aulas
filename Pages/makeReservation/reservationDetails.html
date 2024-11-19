@@ -28,24 +28,13 @@
       <h2>Crear reserva:</h2>
       <h3>Seleccion de aula</h3>
       <p>
-        Si necesita un aula en especifico puede ingresarla, tenga en
-        cuenta que si el aula que busca esta reservada por otro docente esta se
-        mostrara como: <strong style="color: red;">Ocupada</strong> o <strong style="color: green;">Disponible</strong> para una reserva.
+        Si necesita un aula en especifico puede ingresarla, tenga en cuenta que
+        si el aula que busca esta reservada por otro docente esta se mostrara
+        como: <strong style="color: red">Ocupada</strong> o
+        <strong style="color: green">Disponible</strong> para una reserva.
       </p>
 
-      <!-- Formulario -->
       <form id="reservation-form">
-        <label for="students"
-          >Indique la capacidad total que espera reservar</label
-        >
-        <input
-          type="number"
-          id="students"
-          name="students"
-          placeholder="200 Estudiantes"
-          required
-        />
-
         <label for="room">Buscar un aula en específico:</label>
         <input type="text" id="room" name="room" placeholder="Auditorio" />
         <button class="btn primary" id="searchButton">Buscar aula</button>
@@ -54,7 +43,6 @@
           Cargando aulas...
         </div>
 
-        <!-- Tabla de resultados -->
         <table border="1" id="aulasTable">
           <thead>
             <tr>
@@ -63,22 +51,57 @@
               <th>Capacidad</th>
               <th>Nombre</th>
               <th>Tipo de Aula</th>
+              <th>Añadir</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Aquí se insertarán los datos dinámicamente NO QUITARRRRRRRRR-->
+            <tr>
+              <td>1</td>
+              <td>Disponible</td>
+              <td>50</td>
+              <td>Auditorio</td>
+              <td>Conferencia</td>
+              <td><button class="addButton">Añadir</button></td>
+            </tr>
           </tbody>
         </table>
+
+        <!-- Contenedor para mostrar aula seleccionada -->
+        <div
+          id="selectedClassroom"
+          class="selected-classroom"
+          style="margin-top: 20px"
+        >
+          <!-- Aquí se mostrará el aula seleccionada -->
+        </div>
 
         <div class="form-buttons">
           <button type="button" class="btn" id="backButton">
             Volver atrás
           </button>
           <button type="button" class="btn primary" id="nextButton">
-            Siguiente
+            Confirmar
           </button>
         </div>
       </form>
+    </div>
+
+    <!-- Popup de Confirmación -->
+    <div id="confirmationPopup" class="popup" style="display: none">
+      <div class="popup-content">
+        <h3>Se confirmará la siguiente reserva</h3>
+        <p>Las siguientes aulas pasarán a estar reservadas:</p>
+        <p id="selectedRoom"></p>
+        <div class="popup-buttons">
+          <button id="backPopupButton" class="btn">Retroceder</button>
+          <button id="confirmPopupButton" class="btn primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notificación -->
+    <div id="notification" class="notification" style="display: none">
+      <span id="notificationText"></span>
     </div>
 
     <!-- script para busqueda de aulas -->
@@ -96,5 +119,11 @@
         });
       });
     </script>
+
+    <!-- script para añadir aula -->
+    <script src="../../js/confirmReservation.js"></script>
+
+    <!-- script para popup y notificación a la hora de confirmar la reserva -->
+    <script src="../../js/popupReservation.js"></script>
   </body>
 </html>
