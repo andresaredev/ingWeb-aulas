@@ -29,6 +29,8 @@ body {
     color: #FFFFFF;
     position: relative;
     align-items: center;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .logo {
