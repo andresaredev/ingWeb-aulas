@@ -29,8 +29,8 @@ body {
     color: #FFFFFF;
     position: relative;
     align-items: center;
-    height: 100vh;
     overflow-y: auto;
+    height: 100vh;
 }
 
 .logo {
@@ -59,8 +59,12 @@ body {
 .main-content {
     flex: 1;
     padding: 20px;
-}
 
+    h2 {
+        font-size: 50px;
+        color: #333333;
+    }
+}
 
 .top-bar {
     display: flex;
@@ -68,10 +72,80 @@ body {
     margin-top: 20px;
     gap: 10px;
     margin-bottom: 20px;
+}
 
-    a {
-        text-decoration: none;
-    }
+h3 {
+    color: #981826;
+    margin-bottom: 20px;
+} 
+
+form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#aulasTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px; 
+    overflow: hidden;
+}
+
+#aulasTable th, #aulasTable td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#aulasTable th {
+    background-color: #981826;
+    color: #fff;
+}
+
+#aulasTable td {
+    background-color: #fff;
+}
+
+.occupied {
+    color: red;
+    font-weight: bold;
+}
+
+.status.available {
+    background-color: #28A745;
+}
+
+.add-btn,
+.confirm-btn {
+    background-color: #11274a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-btn:hover,
+.confirm-btn:hover {
+    background-color: #0a1c35;
+}
+
+.form-buttons {
+    margin-top: 10px;
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn {
@@ -94,80 +168,6 @@ body {
     color: #FFFFFF;
 }
 
-.content {
-    position: relative;
-    width: 90%;
-    max-width: 1000px;
-}
-
-.content h2 {
-    font-size: 70px;
-    color: #333333;
-}
-
-.highlight {
-    color: #D9272D;
-}
-
-.content p {
-    margin-top: 24px;
-    font-size: 24px;
-    color: #555555;
-}
-
-.reservation-info {
-    margin-top: 20px;
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.table {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.table-row {
-    display: contents;
-}
-
-.table-row span,
-.add-btn {
-    padding: 10px;
-    background-color: #F7F9FB;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.status {
-    color: #FFFFFF;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.status.available {
-    background-color: #28A745;
-}
-
-.add-btn {
-    background-color: #6C757D;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
-
-.selected-info {
-    margin-bottom: 20px;
-}
-
-.actions {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-}
 
 .popup {
     display: none;
@@ -215,8 +215,19 @@ body {
     color: #333;
 }
 
-
 #confirmLogoutButton {
     background-color: #981826;
     color: #fff;
 }
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
